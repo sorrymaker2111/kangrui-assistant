@@ -12,13 +12,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class XiaozhiAgentConfig {
+public class KangruiAgentConfig {
 
     @Autowired
     private MongoChatMemoryStore mongoChatMemoryStore;
 
     @Bean
-    public ChatMemoryProvider chatMemoryProviderXiaozhi() {
+    public ChatMemoryProvider chatMemoryProviderKangrui() {
 
         return memoryId ->
                 MessageWindowChatMemory.builder()
@@ -30,7 +30,7 @@ public class XiaozhiAgentConfig {
     }
 
    /* @Bean
-    ContentRetriever contentRetrieverXiaozhi() {
+    ContentRetriever contentRetrieverKangrui() {
         //使用FileSystemDocumentLoader读取指定目录下的知识库文档
         //并使用默认的文档解析器对文档进行解析
         Document document1 = FileSystemDocumentLoader.loadDocument("F:/knowledge/医院信息.md");
@@ -52,7 +52,7 @@ public class XiaozhiAgentConfig {
     private EmbeddingModel embeddingModel;
 
     @Bean
-    ContentRetriever contentRetrieverXiaozhiPincone() {
+    ContentRetriever contentRetrieverKangruiPincone() {
         // 创建一个 EmbeddingStoreContentRetriever 对象，用于从嵌入存储中检索内容
         return EmbeddingStoreContentRetriever
                 .builder()

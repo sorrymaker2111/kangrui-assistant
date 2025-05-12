@@ -1,4 +1,4 @@
-# 小智医疗 (Xiaozhi-Medical)
+# 康睿助手 (Kangrui-Assistant)
 
 ![版本](https://img.shields.io/badge/版本-1.0-blue)
 ![Java](https://img.shields.io/badge/Java-17-orange)
@@ -7,7 +7,7 @@
 
 ## 项目简介
 
-小智医疗是一个基于 Java 与大模型技术开发的智能医疗服务应用。该系统利用 LangChain4j 框架，结合大型语言模型（如通义千问），为用户提供医疗咨询、智能导诊、挂号预约等服务。
+康睿助手是一个基于 Java 与大模型技术开发的智能医疗服务应用。该系统利用 LangChain4j 框架，结合大型语言模型（如通义千问），为用户提供医疗咨询、智能导诊、挂号预约等服务。
 
 ## 核心功能
 
@@ -59,7 +59,7 @@ langchain4j.community.dashscope.chat-model.api-key=${DASH_SCOPE_API_KEY}
 
 # 数据库连接配置
 spring.data.mongodb.uri=mongodb://localhost:27017/chat_memory_db
-spring.datasource.url=jdbc:mysql://localhost:3306/guiguxiaozhi
+spring.datasource.url=jdbc:mysql://localhost:3306/kangruiassistant
 spring.datasource.username=root
 spring.datasource.password=password
 ```
@@ -68,10 +68,10 @@ spring.datasource.password=password
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/xiaozhi-medical.git
+git clone https://github.com/your-username/kangrui-assistant.git
 
 # 进入项目目录
-cd xiaozhi-medical
+cd kangrui-assistant
 
 # 编译并打包
 mvn clean package
@@ -84,13 +84,13 @@ java -jar target/java-ai-langchain4j-1.0-SNAPSHOT.jar
 
 ```
 src/main/java/com/sorrymaker/java/ai/langchain4j/
-├── XiaozhiApp.java             # 应用程序入口
+├── KangruiApp.java             # 应用程序入口
 ├── assistant/                  # AI助手相关类
-│   ├── XiaozhiAgent.java       # 小智医疗代理
+│   ├── KangruiAgent.java       # 康睿助手代理
 │   ├── MemoryChatAssistant.java # 带记忆的聊天助手
 │   └── SeparateChatAssistant.java # 独立聊天助手
 ├── controller/                 # 控制器
-│   └── XiaozhiController.java  # 小智医疗API接口
+│   └── KangruiController.java  # 康睿助手API接口
 ├── entity/                     # 实体类
 │   └── Appointment.java        # 预约实体
 ├── service/                    # 服务层
@@ -98,7 +98,7 @@ src/main/java/com/sorrymaker/java/ai/langchain4j/
 ├── tools/                      # 大模型工具类
 │   └── AppointmentTools.java   # 预约相关工具
 ├── config/                     # 配置类
-│   └── XiaozhiAgentConfig.java # 小智代理配置
+│   └── KangruiAgentConfig.java # 康睿代理配置
 └── bean/                       # 业务对象
 ```
 
